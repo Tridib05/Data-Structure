@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <conio.h>
 
-#define MAX 7 // Changing this value will change length of array 
+#define MAX 3 // Changing this value will change length of array 
 int queue[MAX];
 int front = -1, rear = -1;
 
@@ -15,7 +15,7 @@ int main()
     int option, val;
     do
     {
-        printf("\n\n **** MAIN MENU ****");
+        printf("\n\n * MAIN MENU *");
         printf("\n 1. Insert an element");
         printf("\n 2. Delete an element");
         printf("\n 3. Peek");
@@ -106,12 +106,18 @@ void display()
 {
     int i;
     printf("\n");
-
-    if (front == -1 || front > rear)
+    if(front == -1)
+    {
         printf("\n QUEUE IS EMPTY");
+    }
     else
     {
-        for (i = front; i <= rear; i++)
-            printf("\t%d", queue[i]); 
+        i = front;
+        while(i != rear)
+        {
+            printf("\t %d", queue[i]);
+            i = (i + 1) % MAX;
+        }
+        printf("\t %d", queue[i]); // Display the last element
     }
 }
