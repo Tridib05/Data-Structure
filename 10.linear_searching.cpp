@@ -6,7 +6,6 @@ void insert();
 void linear_search();
 int arr[size],num,i,n,found=0,pos=-1;
 
-
 int main()
 {
    insert();
@@ -15,10 +14,9 @@ int main()
 	return 0;
 }
 
-
 void linear_search()
 {
-printf("\n Enter the number that has  to be searched:");
+        printf("\n Enter the number that has  to be searched:");
 	scanf("%d",&num);
 	for(i=0;i<n;i++)
    {
@@ -35,11 +33,9 @@ printf("\n Enter the number that has  to be searched:");
 	printf("\n %d does not exist in the array", num);
 }
 
-
-
 void insert()
 {
-printf("\n Enter the number of elements in the array:");
+        printf("\n Enter the number of elements in the array:");
 	scanf("%d",&n);
 	printf("\n Enter the elements:");
 	for(i=0;i<n;i++)
