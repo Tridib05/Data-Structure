@@ -45,7 +45,9 @@ void binary_search()
 
 void insert() 
 { 
-        printf("\n Enter number of elements:"); scanf("%d",&n); 
-        printf("\n enter %d integers:",n); for(c=0;c<n;c++) 
+        printf("\n Enter number of elements:"); 
+        scanf("%d",&n); 
+        printf("\n enter %d integers:",n); 
+        for(c=0;c<n;c++) 
         scanf("%d",&array[c]); 
 }
